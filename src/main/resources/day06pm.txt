@@ -1,0 +1,80 @@
+一、搭建环境
+	JDK
+	Eclipse JEE luna
+	Tomcat 7
+	MySql 5
+
+二、需求分析
+模拟当当网部分功能（在线电子商务交易平台、在线购物系统）
+
+主要实现以下几大模块
+1. 用户管理模块（user）
+	注册、登录
+2. 商品展示模块（main）
+	主界面、类别浏览界面、商品详情
+3. 购物车模块（cart）
+	添加购物车、更改数量、删除商品、恢复购买、金额统计等
+4. 订单模块（order）
+	创建订单（确认）、填写送货地址、下订单成功提示
+
+
+三、项目中包和文件夹的结构
+（1）src目录结构
+	com.tarena			顶层包
+	com.tarena.entity	实体类的包
+	com.tarena.dao		DAO接口的包（data access object）
+	com.tarena.dao.impl	DAO接口的实现类的包
+	com.tarena.util		工具类包（DBUtil.java）
+	com.tarena.action		业务处理类的包
+	com.tarena.action.user	用户管理模块
+	com.tarena.action.main	商品展示模块
+	com.tarena.action.cart	购物车模块
+	com.tarena.action.order	订单模块
+	
+（2）WebContent目录结构
+	/images			界面中的图片
+	/productImages	产品/商品的图片
+	/css				样式文件（美工提供）
+	/js				javascript页面脚本程序
+	/common			公共的通用的jsp页面（页眉页脚）
+	/user			用户模块
+	/main			商品展示模块
+	/cart			购物车模块
+	/order			订单模块
+	error.jsp		系统出错时的提示页面
+	
+	
+	
+四、创建库 及 表（ER图）、创建实体
+1. 创建库
+mysql>create database dangdang charset utf8;
+
+2. 创建出表结构
+mysql> use dangdang;
+mysql> DROP TABLE IF EXISTS d_user;
+mysql> CREATE TABLE d_user (
+  id int(12) NOT NULL auto_increment,
+  email varchar(50) NOT NULL,
+  nickname varchar(50) default NULL,
+  password varchar(50) NOT NULL,
+  user_integral int(12) NOT NULL default '0',
+  is_email_verify char(3),
+  email_verify_code varchar(50) default NULL,
+  last_login_time bigint default NULL,
+  last_login_ip varchar(15) default NULL,
+  PRIMARY KEY  (id),
+  UNIQUE KEY email (email)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+mysql> desc d_user; //查看表结构
+
+3. 创建实体 com.tarena.entity.User
+	表名d_user <对应到> 类的类名 User
+	字段       <对应到> 类的属性(成员变量)
+		id				id
+	user_integral		userIntegral
+
+
+五、实现DAO层的代码（JDBC）
+
+六、用户管理中的注册模块
