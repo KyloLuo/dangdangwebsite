@@ -8,4 +8,7 @@ public class Constant {
 	
 	// 网站名称
 	public static final String SITE_NAME = "当当网";
+	
+	//网站的邮箱地址
+	public static final String EMAIL_ACCOUNT="978364051@qq.com";
 }
