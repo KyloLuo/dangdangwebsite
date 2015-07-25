@@ -1,6 +1,6 @@
 package com.eagle.dangdang.product.dao.impl;
 
-import java.util.Iterator;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
@@ -39,20 +39,24 @@ public class CategotyDAOImpl extends BaseDaoImpl<Category, Long> implements
 	}
 
 	@Override
-	public Category getBooks(long id) {
-		Session session = sessionFactory.openSession();
+	public List<Book> getBooks(long id, int pageIndex, int pageSize) {
+		List<Book> books =new ArrayList<Book>();
+		Session session = getSession();
 		Query query = session
-				.createQuery("from Category as c left join c.books as b  where c.id=:id");
-		query.setParameter("id", id);	
-		List list =query.list();
-		for(int i=0;i<list.size();i++){
-			 Object[] obj=(Object[])list.get(i);
-			 Category category =(Category)obj[0];
-			 Book book =(Book)obj[1];
-			 System.out.println(category.toString());
-			 System.out.println(book.toString());
+				.createQuery("select distinct c.books from Category as c left join c.books as b  where c.id=:id");
+		query.setParameter("id", id);
+		query.setFirstResult(pageIndex*pageSize);
+		query.setMaxResults(pageSize);
+		List list = query.list();
+		for (int i = 0; i < list.size(); i++) {
+			// Object[] obj=(Object[])list.get(i);
+			// Category category =(Category)obj[0];
+			Book book = (Book) list.get(i);
+			// System.out.println(category.toString());
+//			System.out.println(book.toString());
+			books.add(book);
 		}
-		return null;
+		return books;
 	}
 
 	public SessionFactory getSessionFactory() {
@@ -61,6 +65,15 @@ public class CategotyDAOImpl extends BaseDaoImpl<Category, Long> implements
 
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
+	}
+
+	@Override
+	public int getAttachBooksCount(long categoryId) {
+		Session session = getSession();
+		Query query = session
+				.createQuery("select distinct count(*) from  Category as c left join c.books as b  where c.id=:id");
+		query.setParameter("id", categoryId);
+		return ((Long)query.list().get(0)).intValue();
 	}
 
 }

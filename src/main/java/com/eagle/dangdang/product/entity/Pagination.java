@@ -9,7 +9,7 @@ public class Pagination {
 	private int totalCount;
 	private int totalPages;
 	
-	private List<Book> products;
+	private List<Book> books;
 
 	public Pagination() {
 		super();
@@ -55,13 +55,16 @@ public class Pagination {
 		this.totalPages = totalPages;
 	}
 
-	public List<Book> getProducts() {
-		return products;
+
+	public List<Book> getBooks() {
+		return books;
 	}
 
-	public void setProducts(List<Book> products) {
-		this.products = products;
+
+	public void setBooks(List<Book> books) {
+		this.books = books;
 	}
+
 	
 	
 }

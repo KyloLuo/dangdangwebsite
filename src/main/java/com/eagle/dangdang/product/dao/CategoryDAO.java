@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.eagle.dangdang.dao.BaseDao;
+import com.eagle.dangdang.product.entity.Book;
 import com.eagle.dangdang.product.entity.Category;
 
 /**
@@ -24,5 +25,11 @@ public interface CategoryDAO extends BaseDao<Category, Long>{
 	 */
 	public Set<Category> getSubCategories(Category category);
 	
-	public Category getBooks(long id);
+	public List<Book> getBooks(long id,int pageIndex,int pageSize);
+	
+	
+	/**
+	 * @return int 
+	 */
+	public int getAttachBooksCount(long categoryId);
 }

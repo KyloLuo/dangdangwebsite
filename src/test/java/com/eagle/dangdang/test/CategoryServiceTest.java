@@ -13,6 +13,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.eagle.dangdang.product.entity.Book;
 import com.eagle.dangdang.product.entity.Category;
+import com.eagle.dangdang.product.entity.Pagination;
 import com.eagle.dangdang.product.service.CategoryService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -40,21 +41,35 @@ public class CategoryServiceTest {
 	
 	//@Test
 	public void testGetSub(){
-		Set<Category> childs =categoryService.getSubCategories(2);
+		Set<Category> childs =categoryService.getSubCategories(17);
 		Iterator<Category> it =childs.iterator();
 		while(it.hasNext()){
 			System.out.println(it.next());
 		}
 	}
 	
-	@Test
+	//@Test
 	public void testGetBooks(){
-		Category category =categoryService.getCategoryWithBooks(1);
+//		List<Book> books =categoryService.getCategoryWithBooks(2);
 //		if(category.getBooks().size()>0)
 //			System.out.println("query keyi");
 	}
 
 	
+//	@Test
+	public void testGetToalCount(){
+		System.out.println(categoryService.getAttachBooksNum(6));
+	}
+	
+	@Test
+	public void testGetOnePage(){
+		Pagination pagination = categoryService.getBooksByCategoryId(2, 0, 2);
+		System.out.println(pagination.getCurrentPage());
+		System.out.println(pagination.getPageSize());
+		System.out.println(pagination.getTotalCount());
+		System.out.println(pagination.getTotalPages());
+		System.out.println(pagination.getBooks().size());
+	}
 	
 	public CategoryService getCategoryService() {
 		return categoryService;

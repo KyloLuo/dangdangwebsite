@@ -11,6 +11,7 @@ import org.apache.log4j.Logger;
 import org.hibernate.Hibernate;
 import org.springframework.stereotype.Service;
 
+import com.eagle.dangdang.product.NoBooksException;
 import com.eagle.dangdang.product.dao.CategoryDAO;
 import com.eagle.dangdang.product.entity.Book;
 import com.eagle.dangdang.product.entity.Category;
@@ -83,13 +84,29 @@ public class CategoryServiceImpl extends BaseService implements CategoryService 
 	@Override
 	public Pagination getBooksByCategoryId(long categoryId, int currentPage,
 			int pageSize) {
-		// TODO Auto-generated method stub
-		return null;
+		int totalCount =getAttachBooksNum(categoryId);
+		Pagination pagination = new Pagination(currentPage, pageSize,
+				totalCount);
+		List<Book> books =categoryDao.getBooks(categoryId, currentPage, pageSize);
+		if (books.size() == 0) {
+			logger.info("暂时还没有添加社区动态消息");
+			throw new NoBooksException();
+		} else {
+			if (totalCount % pageSize == 0) {
+				pagination.setTotalPages(totalCount / pageSize );
+			} else {
+				pagination.setTotalPages(totalCount / pageSize+1 );
+			}
+			pagination.setBooks(books);
+			return pagination;
+			
+		}
 	}
 
 	@Override
-	public Category getCategoryWithBooks(long categoryId) {
-		return categoryDao.getBooks(categoryId);
+	public int getAttachBooksNum(long categoryId) {
+		return categoryDao.getAttachBooksCount(categoryId);
 	}
+
 
 }

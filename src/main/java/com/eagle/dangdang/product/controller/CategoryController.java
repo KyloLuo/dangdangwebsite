@@ -5,10 +5,9 @@ import java.util.List;
 import java.util.Set;
 
 import javax.annotation.Resource;
-import javax.transaction.Transactional;
 
-import org.hibernate.Hibernate;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.eagle.dangdang.product.entity.Category;
 import com.eagle.dangdang.product.entity.CategoryForJson;
+import com.eagle.dangdang.product.entity.Pagination;
 import com.eagle.dangdang.product.entity.SubCategory;
 import com.eagle.dangdang.product.service.CategoryService;
 
@@ -58,16 +58,17 @@ public class CategoryController {
 		return jsonForReturn;
 	}
 
-	//商品显示
-	@RequestMapping(value = "/{categpry_id}/{currentPage}/{pageSize}")
-	public String getBookByCategory(long categoryId, int currentPage,
-			int pageSize) {
-		
+	// 商品显示
+	@RequestMapping(value = "/{category_id}/{currentPage}/{pageSize}")
+	public String getBookByCategory(
+			@PathVariable("categoryId") long categoryId,
+			@PathVariable("currentPage") int currentPage,
+			@PathVariable("pageSize") int pageSize, Model model) {
+		Pagination pagination =categoryService.getBooksByCategoryId(categoryId, currentPage, pageSize);
+		model.addAttribute("books_pageInfo", pagination);
 		return "main/book_list";// 返回显示一页产品信息的页面
 	}
 
-	
-	
 	// 将一级目录只带其直接子目录返回，解决Json的循环解析问题
 	public CategoryForJson formatCateGory(Category category) {
 		CategoryForJson json = new CategoryForJson();

@@ -30,8 +30,7 @@ public interface CategoryService {
 	//根据目录查找到所属的产品并分页显示
 	public Pagination getBooksByCategoryId(long categoryId,int currentPage,int pageSize);
 
-	
-	//根据id查询返回一个目录对象，并携带其部分所属的图书信息
-	public Category getCategoryWithBooks(long categoryId);
+	//获得某个目录对应的图书的总数
+	public int getAttachBooksNum(long categoryId);
 	
 }
