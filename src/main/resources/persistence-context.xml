@@ -64,6 +64,7 @@
 		<property name="packagesToScan">
 			<list>
 				<value>com.eagle.dangdang.user.entity</value>
+				<value>com.eagle.dangdang.product.entity</value>
 			</list>
 		</property>
 
