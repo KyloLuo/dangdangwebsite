@@ -1,0 +1,890 @@
+*{
+ margin:0px;
+ padding:0px;
+ }
+ body{
+ padding:0px;
+ margin:0px;
+ }
+ 
+ /*head部分*/
+ #head_content{
+ 	position: relative;
+ 	width: 100%;
+ 	height:auto !important;
+ 	min-height: 100px;
+ 	
+ }
+ #head_container{
+ 	position:relative;
+ 	min-width: 1200px;
+ 	height: 5%;
+ 	background-color: #f9f9f9;
+ }
+ #ddnewhead_operate{
+ 	position: relative;
+ 	margin: 0 auto;
+ 	width: 80%;
+ 	height:100%;
+ 	background-color: #f9f9f9;
+ }
+ #ddnewhead_welcome{
+ 	position: relative;
+ 	display: inline-block;
+ 	width: 20%;
+ 	height: 90%;
+ 	background-color: #f9f9f9;
+ }
+ #ddnewhead_welcome span {
+ 	font:12px 'Hiragino Sans GB',"simsun","Arial";
+ 	color:#646464;
+ }
+ #ddnewhead_welcome a{
+ 	color:#ff2832;
+ 	text-decoration: none;
+ }
+ #ddnewhead_welcome_inner{
+ 	height: 80%;
+ 	width: 100%;
+ 	margin-top: 10px;
+ 	text-align:center;
+ 	background-color: #f9f9f9;
+ }
+ #ddnewhead_rightinfo{
+ 	position:relative;
+    width: 40%;
+    height:90%;
+ 	float: right;
+ 	padding-top: 2px;
+ 	background-color: #f9f9f9;
+ }
+ #ddnewhead_rightinfo_div{
+ 	position:relative;
+    height: 80%;
+ 	width: 50%;
+ 	margin-top: 4px;
+ 	float:right;
+ 	background-color: #f9f9f9;
+ }
+
+ .cart_icon{
+ 	float:left;
+ 	width:21px;
+ 	height:21px;
+ }
+ .shopping{
+    position:relative;
+    display:inline-block;
+ 	width: 20%;
+ 	height: 20px;
+ 	margin-top: 5px;
+ }
+#ddnewhead_rightinfo_div a{
+    font:12px 'Hiragino Sans GB',"simsun","Arial";
+    text-decoration: none;
+ }
+ #logo_line_out{
+ 	position:relative;
+ 	min-width: 1200px;
+ 	height: 16%;
+ 	background-color: #fff;
+ }
+ #logo_line{
+ 	position: relative;
+ 	margin: 0 auto;
+ 	width: 80%;
+ 	height:100%;
+ }
+ #logo{
+ 	position: relative;
+ 	width: 40%;
+ 	height: 100%;
+ }
+ /*购物车大字体*/
+ .cart_font{
+ 	position: absolute;
+ 	display:inline-block;
+ 	width: 70px;
+ 	height: 30px;
+ 	left:200px;
+ 	top:43px;
+ 	line-height: 30px;
+ 	font-size: 15pt;
+ 	font-weight: bold;
+ }
+ #nav_top{
+ 	position: relative;
+ 	width: 100%;
+ 	height: 36px;
+ 	background-color: #ff2832;
+ }
+ #nav_top ul{
+ 	position: relative;
+ 	list-style:none;
+ 	margin:0 auto;
+ 	width: 80%;
+ 	height: 100%;
+ }
+ #nav_top li{
+ 	position: relative;
+ 	float:left;
+ 	width:10%;
+ 	height:100%;
+ 	list-style:none;
+ 	padding-top:8px;
+ 	text-align: center;
+ }
+ #nav_top a{
+ 	text-decoration: none;
+ 	font:22px 'Hiragino Sans GB',"simsun","Arial";
+ 	color:#fff;
+ 	font-weight: bold;
+ }
+ #nav_top a:HOVER{
+ 	color:#c0c0c0;
+ 	font-weight: bold;
+ }
+ .promote_image{
+ 	position: relative;
+ 	margin:0 auto;
+ 	width: 1200px;
+ 	height: 65px;
+ 	margin-top: 5px;
+ 	background: url("http://img61.ddimg.cn/upload_img/00087/hw/1200x65_hr_0617.jpg");
+ }
+ 
+ /* main*/
+ #main_content{
+    position:relative;
+ 	width: 90%;
+ 	height: auto !important;
+ 	min-height: 900px;
+ 	margin: 0px auto;
+ 	z-index:1
+ }
+ /*sidemenu*/
+ #sidemenu_content{
+ 	position: relative;
+ 	float:left;
+ 	height: auto !important;
+ 	min-height: 600px;
+ 	width: 20%;
+ 	margin-right: 5px;
+ 	z-index:999999;
+ }
+ #sidemenu_info{
+ 	position: relative;
+ 	width: 80%;
+ 	height: auto !important;
+    margin: 10 auto;
+ }
+ .menu_head{
+ 	position: relative;
+ 	width: 99%;
+ 	height: 8%;
+ 	background-color: #487a6f;
+ 	border-radius:4px 4px 0 0;
+ 	color:#fff;
+ 	text-align:center;
+ 	line-height:45px;;
+ 	font-family: "Microsoft Yahei";
+ }
+ .menu_content{
+ 	position: relative;
+ 	height: auto;
+ 	width: 99%;
+ 	border-top:2px dotted #487a6f;
+ 	
+ }
+ 
+ /*中间部分样式*/
+ #middle_content{
+ 	position: relative;
+ 	display:inline-block;
+ 	height: auto !important;
+ 	min-height: 600px;
+ 	padding-top:10px;
+ 	width: 61%;
+ }
+#slide{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+ 	min-height: 300px;
+	
+}
+/* 主界面右部样式*/
+#right_content{
+	position: relative;
+	width: 18%;
+	height: auto !important;
+ 	float: right;	
+}
+#right_info{
+	position: relative;
+	width: 90%;
+	height: auto !important;
+	margin: 0 auto;
+}
+.hotsell{
+	position: relative;
+	width: 50%;
+	height: 5%;
+	margin: 10px auto;
+	font-family: "Microsoft Yahei";
+	font-size: 12pt;
+	text-align: center;
+}
+.hotsellbook{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	font-family: "Microsoft Yahei";
+	font-size: 10pt;
+	padding-top:10px;
+	border: 2px solid #487a6f;
+	border-radius:15px; 
+}
+.hotsellbook ul{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	
+}
+.hotsellbook ul li{
+	position: relative;
+	width: 100%;
+	height: 10%;
+	border-bottom: 1px solid #487a6f;
+	border-top: 1px solid #487a6f;
+	text-align: center;
+	
+}
+.hotsellbook ul li a{
+	position: relative;
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color:#487a6f;
+	font-weight: bold;
+	padding-top: 20px; 
+}
+.hotsellbook ul li:HOVER {
+	background-color: #487a6f;
+	font: #fff;
+}
+.hotsellbook ul li a:HOVER {
+	color: #fff;
+}
+.book_online_title{
+	margin-top: 8px;
+}
+/* 具体书籍*/
+#newbooks_content{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+ 	margin-top: 5px;
+}
+#newbook_info{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+ 	min-height: 500px;
+}
+#newbook_info_top{
+	position: relative;
+	width: 100%;
+	height: 250px;
+}
+#newbook_info_bottom{
+	position: relative;
+	width: 100%;
+	height: 250px;
+}
+#newbook_info ul{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	list-style-type: none;
+}
+#newbook_info ul li{
+	position: relative;
+	display:block;
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+#newbook_info ul li a{
+	position: relative;
+	width: 200px;
+	height: 200px;
+}
+#newbook_info span{
+	position: relative;
+	display: block;
+	width: 180px;
+	height: 20px;
+}
+span.bookname{
+	margin-top: 5px;
+}
+span.author{
+	margin-top: 15px;
+	color: #aaa;
+}
+span.price{
+	margin-top: 5px;
+	color: #ff0000;
+	font-weight: bold;
+}
+a.a_bookname{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	color: #000;
+	
+}
+a.a_bookname:HOVER{
+	color: #fa5000;
+}
+.middle_foot{
+	position: relative;
+	width: 99%;
+	height: 80px;
+	text-align:center;
+	margin: 10px;
+}
+/*foot*/
+#foot_content{
+	position: relative;
+	width: 100%;
+	height: auto ! important;
+}
+#foot_info{
+	position: relative;
+	width: 100%;
+	height: auto ! important;
+	min-height: 300px;
+	border-top: 2px solid #fa5000;
+}
+.footer_pic_new{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	background-color: #fafafa;
+	border-bottom: 1px solid #ebebeb;
+}
+.footer_pic_new_inner{
+	position: relative;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.public_footer_new{
+	position: relative;
+	width: 100%;
+	height: 170px;
+	background-color: #fff;
+	border-bottom: 1px solid #ebebeb;
+	text-align: center;
+}
+.footer_pic_new span{
+	position: relative;
+	display: block;
+	height: 20px;
+	width: 80%;
+	margin:10px auto;
+	text-align: center;
+}
+/*当前图书位置目录*/
+.breadcrumb{
+	position: relative;
+	height:40px;
+	width: 85%;
+	padding: 10px 0px;
+	margin:0 auto;
+	background-color: #fff;
+}
+.breadcrumb a{
+	text-decoration: none;
+	font-family: "Microsoft Yahei";
+}
+/*第三层目录(侧边栏)*/
+#thirdmenu_content{
+	position: relative;
+ 	float:left;
+ 	height: auto !important;
+ 	min-height: 600px;
+ 	width: 20%;
+ 	margin-right: 5px;
+}
+#thirdmenu_info{
+	position: relative;
+ 	width: 80%;
+ 	height: auto !important;
+    margin: 10 auto;
+    border: 1px solid #ff8000;
+}
+#thirdmenu_info ul{
+	position: relative;
+	width: 100%;
+	height: auto !important;
+	list-style-type: none;
+}
+.thirdmenu_title{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	margin:0px auto;
+	font-family: "Microsoft Yahei";
+	font-size: 15pt;
+	background-color: #ff8000;
+	color: #fff;
+}
+#thirdmenu_info ul li{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	border-bottom:1px solid #000;
+	padding-top: 10px;
+}
+#thirdmenu_info ul li a{
+	color:#000;
+	text-decoration: none;
+}
+#thirdmenu_info ul li a:HOVER {
+	color: #ff8000;
+}
+/* 图书列表的中间部分*/
+ #list_book_content{
+ 	position: relative;
+ 	display:inline-block;
+ 	height: auto !important;
+ 	min-height: 600px;
+ 	padding-top:10px;
+ 	width: 79%;
+ }
+ #list_top{
+ 	position: relative;
+ 	width: 100%;
+ 	height: 38px;
+ 	border: solid 1px #c6c6c6;
+ 	margin-bottom: 3px;
+ 	background-color: #fff;
+ 	border-bottom: solid 3px #fe7c2c;
+ }
+ #list_top span{
+ 	position: relative;
+ 	display:inline-block;
+ 	width: 5%;
+ 	height: 38px;
+ 	text-align: center;
+ 	padding-top:8px;
+ 	font-family: "Microsoft Yahei";
+ 	font-weight: bold;
+ }
+  .list_top_middle{
+  	position: absolute;
+  	display: inline-block;
+  	width: 80%;
+  	height: 100%;
+  	left: 5%;
+  	top:0;
+  	
+  }
+#list_top ul{
+	position:relative;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	list-style-type: none;
+}
+#list_top ul li{
+	position:relative;
+	width: 10%;
+	height: 100%;
+	float: left;
+	text-align: center;
+	border-right: 1px solid #c0c0c0;
+} 
+#list_top ul li:HOVER{
+	background-color: #ff8000;
+} 
+#list_top ul li a{
+	display:inline-block;
+	height:100%;
+	width:100%;
+	line-height:36px;
+	color:#000;
+	text-decoration: none;
+	font-family: "Microsoft Yahei";
+}
+.total_books{
+	display: inline-block;
+	width: 15%;
+	height: 100%;
+	line-height:38px;
+	text-align:center;
+	float: right;
+	font-family: "Microsoft Yahei";
+}
+/*以下开始具体书籍列表 样式*/
+#con_shoplist{
+	position: relative;
+	width: 100%;
+	height: auto ! important;
+	
+}
+#con_shoplist ul{
+	position: relative;
+	display:block;
+	width: 100%;
+	height: auto ! important;
+	padding: 30px auto;
+	
+}
+#con_shoplist ul li{
+	position: relative;
+	display:block;
+	width: 100%;
+	height: 250px;
+	border-bottom: 1px solid #ff0000;
+	margin-top: 20px;
+	padding-left: 30px;
+	padding-top: 10px;
+}
+#con_shoplist ul li span{
+	position: relative;
+	display: block;
+	float: left;
+	width: 150px;
+	height: 180px;
+	background-color: #fff;
+	z-index: 99999;
+}
+.shoplist_bookname{
+	position: relative;
+	display: block;
+	margin-left: 12%;
+	width: 70%;
+	height: 20px;
+	background-color: #fff;
+	color:#0000ff;
+}
+.shoplist_score{
+	position: relative;
+	display: block;
+	margin-top: 20px;
+	width: 30%;
+	height: 20px;
+	margin-left: 12%;
+	background-color: #fff;
+}
+.shoplist_author_place_time{
+	position: relative;
+	margin-top: 10px;
+	width: 800%;
+	height: 20px;
+	margin-left: 12%;
+	background-color: #fff;
+}
+.author_place_time{
+	position: relative;
+	display: inline-block;
+	width: 250px;
+	height: 100%;
+	line-height: 20px;
+	margin-right: 10px;
+}
+.easy_desc{
+	position: relative;
+	width: 800px;
+	height: auto;
+	margin-left: 12%;
+	margin-top: 10px;
+	background-color: #fff;
+	color:#878787;
+}
+.price_buy{
+	position: relative;
+	width: 350px;
+	height: 40px;
+	float:right;
+	margin-right: 40px;
+	margin-top: 10px;
+	background-color: #fff;
+	line-height: 25px;
+}
+.book_dangdang_price{
+	position: relative;
+	display: inline-block;
+	width: 15%;
+	height: 25px;
+	margin-top: 6px;
+	color: red;
+	font-family: Arial;
+}
+.book_market_price{
+	position: relative;
+	display: inline-block;
+	width: 15%;
+	height: 25px;
+	margin-top: 6px;
+	text-decoration: line-through;
+	color: #878787;
+	font-family: Arial;
+}
+.book_buy{
+	position: absolute;
+	display: inline-block;
+	width: 90px;
+	height: 25px;
+	margin-top: 6px;
+}
+.book_cart{
+	position: relative;
+	display: inline-block;
+	float: right;
+	width: 40%;
+	height:40px; 
+}
+#price_buy a{
+	text-decoration: none;
+	display:block;
+	width: 100%;
+	height: 100%;
+}
+/*购物车页面样式*/
+#cart_list{
+	position: relative;
+	margin:30px auto;
+	width: 80%;
+	height: auto;
+}
+#cart_list ul{
+	position: relative;
+	display:block;
+	width: 100%;
+	height: auto;
+}
+#cart_list ul li{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 180px;
+	border: 1px solid #ccc;
+}
+.cart_list_top{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	line-height: 30px;
+	border-bottom:2px solid #ff8000;
+	margin-bottom: 30px;
+}
+.cart_list_bookinfo{
+	position: relative;
+	width: 40%;
+	height:100%;
+	display:inline-block;
+	float: left;
+	text-align: center;
+}
+.cart_list_bookcon{
+	position: relative;
+	width: 40%;
+	height:100%;
+	display:inline-block;
+	float: left;
+}
+.cart_list_bookcon_pic{
+	position: relative;
+	display:inline-block;
+	margin:5px auto;
+	width: 50%;
+	height:95%;
+	float:left;
+	text-align: center;
+}
+.cart_list_bookcon_name{
+	position: relative;
+	display:inline-block;
+	margin:40px auto;
+	width: 35%;
+	height:30%;
+	text-align: center;
+}
+.cart_list_bookother{
+	position: relative;
+	width: 15%;
+	height:100%;
+	display:inline-block;
+	float: left;
+	text-align: center;
+}
+.cart_list_market{
+	position: relative;
+	width: 35%;
+	height: 15%;
+	margin-left: 30%;
+	margin-top: 20%;
+	text-align: center;
+	line-height: 10%;
+	text-decoration: line-through;
+	color: #878787;
+}
+.cart_list_dangdang{
+	position: relative;
+	width: 35%;
+	height: 25%;
+	margin-left: 30%;
+	margin-top: 2%;
+	text-align: center;
+	line-height: 10%;
+}
+.item-amount{
+	position: relative;
+	width: 60%;
+	height: 18%;
+	margin-left: 25%;
+	margin-top: 20%;
+}
+.item-amount_cut{
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 20%;
+	float:left;
+	text-align:center;
+	line-height:30px;
+	background-color: #f0f0f0;
+	text-decoration: none;
+	color: #000;
+}
+.item-amount_cut:HOVER {
+	border: 1px solid #ff8000;
+	
+}
+.item-amount_input{
+	position: relative;
+	width: 57%;
+	height: 100%;
+	text-align:center;
+	border: 1px solid #aaa;
+}
+.item-amount_add{
+	position: relative;
+	display: inline-block;
+	height: 100%;
+	width: 20%;
+	float:right;
+	text-align:center;
+	line-height:30px;
+	background-color: #f0f0f0;
+	text-decoration: none;
+	color: #000;
+}
+.item-amount_add:HOVER {
+	border: 1px solid #ff8000;
+	
+}
+.cart_list_del{
+	position: relative;
+	display:block;
+	width:40px;
+	margin-left:30%;
+	margin-top: 25%;
+	text-decoration: none;
+	text-align: center;
+	color: #000;
+}
+.cart_list_del:HOVER{
+	text-decoration: underline;
+}
+.cart_totalprice{
+	position: relative;
+	width: 80%;
+	height: 200px;
+	margin: 10px auto  50px;
+	border:0 solid #efeae5;
+	background-color: #f8f6f2;
+}
+.cart_totalprice_right{
+	position:absolute;
+	width: 30%;
+	height: 60%;
+	right:5px;
+	bottom:5px;
+}
+.cart_totalprice_right_top{
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+.cart_totalprice_font{
+	position: absolute;
+	display:inline-block;
+	width: 48%;
+	height: 60px;
+	left:0;
+	top:0;
+	line-height:60px;
+	text-align: right;
+	font-family: "Microsoft Yahei";
+}
+.cart_totalprice_number{
+	position: absolute;
+	display:inline-block;
+	width: 48%;
+	height: 60px;
+	right:0;
+	top:0;
+	text-align: left;
+	font-size:20px;
+	font-weight:bold;
+	color:#c30;
+	line-height:60px;
+}
+.cart_totalprice_right_bottom{
+	position: relative;
+	width: 100%;
+	height: 50%;
+}
+.cart_totalprice_right_bottom a{
+	position: relative;
+	display: block;
+	width: 80%;
+	height: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+.cart_list_bookprice{
+	position: relative;
+	width: 100%;
+	height:100%;
+	text-align: center;
+}
+#pageinfo_div{
+	position: relative;
+	margin:20px auto;
+	width: 60%;
+	height: 50px;
+	text-align: center;
+}
+.pageinfo{
+	position: relative;
+	margin:20px auto;
+	width: 60%;
+	height: 50px;
+	text-align: center;
+}
+#pageinfo_div span{
+	font-family: Helvetica, Tahoma, Arial, STXihei, "华文细黑", Heiti, "黑体",
+		"Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif;
+}
