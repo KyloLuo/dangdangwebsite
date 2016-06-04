@@ -41,9 +41,20 @@ public class Product {
 	@Column(name="product_name",nullable=false)
 	private String productName;
 	
+	@Column(name="description",nullable=false)
+	private String description;
+	
 	@Column(name="add_time")
 	private Date addTime;
 	
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
 	@Column(name="fixed_price")
 	private double fixedPrice;
 	
@@ -123,6 +134,37 @@ public class Product {
 
 	public void setProductPic(String productPic) {
 		this.productPic = productPic;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + (int) (id ^ (id >>> 32));
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Product other = (Product) obj;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", productName=" + productName
+				+ ", description=" + description + ", addTime=" + addTime
+				+ ", fixedPrice=" + fixedPrice + ", dangPrice=" + dangPrice
+				+ ", keywords=" + keywords + ", hasDeleted=" + hasDeleted
+				+ ", productPic=" + productPic + "]";
 	}
 
 	

@@ -17,6 +17,7 @@
 	<import resource="shiro.xml"/>
 	<context:component-scan base-package="com.eagle.dangdang.user.*"></context:component-scan>
 	<context:component-scan base-package="com.eagle.dangdang.product.*"></context:component-scan>
+	<context:component-scan base-package="com.eagle.dangdang.order.*"></context:component-scan>
 	
 	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
 		<property name="defaultEncoding" value="UTF-8" />

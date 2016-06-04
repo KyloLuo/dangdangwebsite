@@ -1,5 +1,8 @@
 package com.eagle.dangdang.user.service;
 
+import java.util.List;
+
+import com.eagle.dangdang.user.entity.ReceiveAddress;
 import com.eagle.dangdang.user.entity.User;
 
 
@@ -21,4 +24,7 @@ public interface UserService {
 	
 	//跟新一个User对象
 	public User updateUser(User user);
+	
+	//根据用户id获得其所有的收货地址
+	public List<ReceiveAddress> getAddresses(long userId);
 }

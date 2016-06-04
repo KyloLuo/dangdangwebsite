@@ -1,5 +1,7 @@
 package com.eagle.dangdang.product.service;
 
+import java.util.List;
+
 import com.eagle.dangdang.product.entity.Book;
 import com.eagle.dangdang.product.entity.Product;
 
@@ -24,6 +26,10 @@ public interface BookService {
 	//根据id获得书本的详细信息
 	public Book findBookById(long id);
 	
-	
+	//获得最新上架的书
+	public List<Book> getRecentBooks(int  num);
+		
+	//获得最热的书
+	public List<Book> getHotBooks(int num);
 	
 }

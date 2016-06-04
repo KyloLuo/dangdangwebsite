@@ -1,5 +1,7 @@
 package com.eagle.dangdang.product.service.impl;
 
+import java.util.List;
+
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
 
@@ -65,6 +67,18 @@ public class BookServiceImpl extends BaseService implements BookService{
 
 	public void setBookDao(BookDAO bookDao) {
 		this.bookDao = bookDao;
+	}
+
+	@Override
+	public List<Book> getRecentBooks(int num) {
+		
+		return bookDao.getRecentBooks(num);
+	}
+
+	@Override
+	public List<Book> getHotBooks(int num) {
+		// TODO Auto-generated method stub
+		return bookDao.getHotBooks(num);
 	}
 	
 	

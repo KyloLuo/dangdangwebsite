@@ -1,4 +1,6 @@
-package com.eagle.dangdang.user.service;
+package com.eagle.dangdang.user.service.impl;
+
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.transaction.Transactional;
@@ -9,7 +11,9 @@ import org.springframework.stereotype.Service;
 
 import com.eagle.dangdang.service.BaseService;
 import com.eagle.dangdang.user.dao.UserDAO;
+import com.eagle.dangdang.user.entity.ReceiveAddress;
 import com.eagle.dangdang.user.entity.User;
+import com.eagle.dangdang.user.service.UserService;
 
 /**
  * @author dpc User服务类接口的具体实现
@@ -57,6 +61,11 @@ public class UserServiceImpl extends BaseService implements UserService {
 		validate(user);
 		userDAO.update(user);
 		return user;
+	}
+
+	@Override
+	public List<ReceiveAddress> getAddresses(long userId) {
+		return userDAO.getAddresses(userId);
 	}
 
 }

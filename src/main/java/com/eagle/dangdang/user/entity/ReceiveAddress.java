@@ -3,6 +3,7 @@ package com.eagle.dangdang.user.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -52,7 +53,7 @@ public class ReceiveAddress {
 	@Column(name = "phone")
 	private String phone;
 	
-	@ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},optional=true)
+	@ManyToOne(cascade={CascadeType.MERGE,CascadeType.REFRESH},optional=true,fetch=FetchType.EAGER)
 	private User user;
 	
 	public ReceiveAddress(){}

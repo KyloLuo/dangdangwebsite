@@ -1,6 +1,9 @@
 package com.eagle.dangdang.user.dao;
 
+import java.util.List;
+
 import com.eagle.dangdang.dao.BaseDao;
+import com.eagle.dangdang.user.entity.ReceiveAddress;
 import com.eagle.dangdang.user.entity.User;
 
 /**
@@ -28,6 +31,8 @@ public interface UserDAO extends BaseDao<User, Long>{
 	 * @return user
 	 */
 	public User addUser(User user);
+	
+	public List<ReceiveAddress> getAddresses(long userId);
 	
 
 }

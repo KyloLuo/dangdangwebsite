@@ -47,7 +47,7 @@ public class UserController {
 
 	@RequestMapping(value = "/loginForm", method = RequestMethod.GET)
 	public String loginForm() {
-		return "/login";// 跳转到用户的登陆页面
+		return "/user/login_form";// 跳转到用户的登陆页面
 	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
@@ -56,6 +56,7 @@ public class UserController {
 			HttpServletRequest request) throws Exception {
 		logger.info("begin login prepared to authenticate");
 		// 配置用户名和口令
+		System.out.println(email);
 		UsernamePasswordToken token = new UsernamePasswordToken(email,
 				MD5Util.encode(password));
 		try {
@@ -151,7 +152,7 @@ public class UserController {
 		if (user.getEmailVerifyCode().equals(verifyCode)) {
 			user.setEmailVerify(true);
 			userService.updateUser(user);// 持久化
-			session.removeAttribute("user_register");//移除session对象，释放资源
+			//session.removeAttribute("user_register");//移除session对象，释放资源
 			// 验证成功，提示注册成功
 			return "user/verify_ok";
 		} else {
@@ -166,7 +167,12 @@ public class UserController {
 	public String beginVerify(Model model) {
 		return "user/verify_form";
 	}
-
+	//成功登录跳转到主界面
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String skipToMain() {
+		return "/main/main";
+	}
+	
 	public String getEmailText(String verifyCode) {
 		StringBuilder text = new StringBuilder("验证码为:");
 		text.append(verifyCode);

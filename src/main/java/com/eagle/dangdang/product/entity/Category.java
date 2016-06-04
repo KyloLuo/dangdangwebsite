@@ -65,9 +65,7 @@ public class Category {
 
 	@OneToMany(cascade = { CascadeType.ALL }, fetch = FetchType.LAZY, mappedBy = "parentCategory")
 	private Set<Category> categories = new HashSet<Category>(0);
-
-	//@OneToMany(cascade={CascadeType.MERGE})
-	//@JoinTable(name = "D_CATEGORY_BOOK", joinColumns = { @JoinColumn(name = "category_id") }, inverseJoinColumns = { @JoinColumn(name = "book_id") })
+	
 	@ManyToMany(targetEntity=Book.class)
 	@JsonIgnore
 	private Set<Book> books = new HashSet<Book>(0);
